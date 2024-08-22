@@ -31,3 +31,34 @@
   margin-left: 10px;
   border: none;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
+.item-hover:hover {
+  width: 350px;
+  transition: all 0.3s;
+}
+.img-box {
+  width: 300px;
+  overflow: hidden;
+}
+.l-container {
+  height: 50vh;
+  gap: 10px;
+}
+.login-input {
+  border: none;
+}
+.login-box {
+  width: 350px;
+  padding: 14px 8px;
+  border-radius: 8px;
+}
+.login-btn {
+  color: white;
+  width: 350px;
+  font-size: 18px;
+  text-align:center;
+  border-radius: 8px;
+  border: none;
+}
