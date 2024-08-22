@@ -6,6 +6,7 @@ export const ProductDetail = () => {
   const {id} = useParams();
   
   const getProducts = async () => {
+    console.log(id);
     let url = `https://my-json-server.typicode.com/Choring/hnm-react-router-practice/products?id=${id}`;
     let response = await fetch(url);
     let data = await response.json();
