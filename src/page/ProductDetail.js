@@ -27,7 +27,7 @@ export const ProductDetail = () => {
           {productList?.choice === true ? <p className='m-0'>Conscious choice</p> : null}
           <select style={{width:200}}>
             <option>사이즈 선택</option>
-            {(productList.size).map((item,index) => (
+            {(productList?.size)?.map((item,index) => (
               <option value={item} key={index}>{item}</option>
             ))}
           </select>
