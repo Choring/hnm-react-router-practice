@@ -6,7 +6,6 @@ export const ProductDetail = () => {
   const {id} = useParams();
   
   const getProducts = async () => {
-    console.log(id);
     let url = `https://my-json-server.typicode.com/Choring/hnm-react-router-practice/products?id=${id}`;
     let response = await fetch(url);
     let data = await response.json();
@@ -16,7 +15,6 @@ export const ProductDetail = () => {
   useEffect(() => {
       getProducts();
   },[id]);
-
   return (
     <div>
       <div className='container d-flex justify-content-center gap-5'>
@@ -29,9 +27,9 @@ export const ProductDetail = () => {
           {productList?.choice === true ? <p className='m-0'>Conscious choice</p> : null}
           <select style={{width:200}}>
             <option>사이즈 선택</option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
+            {(productList.size).map((item,index) => (
+              <option value={item} key={index}>{item}</option>
+            ))}
           </select>
           <button className='bg-primary text-white mt-3'>추가하기</button>
         </div>
